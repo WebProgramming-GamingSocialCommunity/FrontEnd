@@ -18,6 +18,7 @@ class PostBoard extends Component {
 
 PostBoard.PropTypes = {
   posts: PropTypes.arrayOf(React.PropTypes.shape({
+    user: PropTypes.string,
     postContent: PropTypes.string.isRequired
   }))
 };

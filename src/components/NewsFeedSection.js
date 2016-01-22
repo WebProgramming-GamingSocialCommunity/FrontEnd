@@ -24,6 +24,7 @@ class NewsFeedSection extends Component {
 
 NewsFeedSection.PropTypes = {
   posts: PropTypes.arrayOf(PropTypes.shape({
+    usr: PropTypes.string,
     postContent: PropTypes.string.isRequired
   })).isRequired,
   addPost: PropTypes.func.isRequired
