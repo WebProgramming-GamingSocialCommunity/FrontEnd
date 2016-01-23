@@ -11,8 +11,12 @@ function setup(propOverrides) {
   const props = Object.assign({
     posts: [
       {
+        usr: "Test",
+        title: "Test Title",
         postContent: "Testing PostBoard"
       },{
+        usr: "Test Test",
+        title: "Test Title Test Title",
         postContent: "Testing PostBoard Testing PostBoard"
       }
     ]

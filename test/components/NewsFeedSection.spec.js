@@ -12,8 +12,12 @@ function setup() {
   const props = {
     posts: [
       {
+        usr: "Test",
+        title: "Test Title",
         postContent: "Testing NewsFeedSection"
       },{
+        usr: "Test Test",
+        title: "Test Title Test Title",
         postContent: "Testing NewsFeedSection Testing NewsFeedSection"
       }
     ],

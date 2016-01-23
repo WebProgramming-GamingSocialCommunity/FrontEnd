@@ -4,13 +4,14 @@ import { spy } from 'sinon';
 import {
   createRenderer
 } from 'react-addons-test-utils';
-import { Well, Modal } from 'react-bootstrap';
+import { Well, Modal, Col } from 'react-bootstrap';
 import Post from '../../src/components/Post';
 
 function setup() {
   const props = {
     post: {
-      user: "Test",
+      usr: "Test",
+      title: "Test Title",
       postContent: "Testing Post"
     }
   };
@@ -32,13 +33,17 @@ describe('components', () => {
       const { output } = setup();
       const header = output.props.children[0];
       expect(header.type).to.equal(Modal.Header);
-      expect(header.props.children.type).to.equal(Modal.Title);
+
+      const [ usr, title ] = header.props.children;
+      expect(usr.type).to.equal(Col);
+      expect(title.type).to.equal(Modal.Title);
     });
     it('should ruender user correvtly', () => {
       const { output } = setup();
       const header = output.props.children[0];
-      const title = header.props.children;
-      expect(title.props.children).to.equal('Test');      
+      const [ usr, title ] = header.props.children;
+      expect(usr.props.children).to.equal('Test');
+      expect(title.props.children).to.equal('Test Title');      
     });
     it('render postContent correctly', () => {
       const { output } = setup();

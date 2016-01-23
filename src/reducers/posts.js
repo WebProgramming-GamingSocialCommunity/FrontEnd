@@ -2,6 +2,8 @@ import { ADD_POST} from '../actionTypes';
 
 const initialState = [
   {
+    usr: 'First',
+    title: 'First title',
     postContent: 'First post'
   }
 ];

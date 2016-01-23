@@ -8,6 +8,8 @@ describe('post reducer', () => {
       postsReducer(undefined, {})
     ).to.deep.equal([
       {
+        usr: 'First',
+        title: 'First title',
         postContent: 'First post',
       }
     ]);

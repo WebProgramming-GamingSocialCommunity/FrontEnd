@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Well, Modal } from 'react-bootstrap';
+import { Well, Modal, Col } from 'react-bootstrap';
 
 class Post extends Component {
   render() {
@@ -7,7 +7,8 @@ class Post extends Component {
     return (
       <Well>
         <Modal.Header>
-          <Modal.Title>{ post.user }</Modal.Title>
+          <Col lg={2}>{ post.usr }</Col>
+          <Modal.Title>{ post.title }</Modal.Title>
         </Modal.Header>
         { post.postContent }
       </Well>
@@ -17,7 +18,8 @@ class Post extends Component {
 
 Post.propTypes = {
   post: PropTypes.shape({
-    user: PropTypes.string,
+    usr: PropTypes.string,
+    title: PropTypes.string,
     postContent: PropTypes.string.isRequired
   }).isRequired
 };
