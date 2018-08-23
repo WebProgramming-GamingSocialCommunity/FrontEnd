@@ -9,15 +9,13 @@ export function addPost(postContent){
 
 export function addPostToServer(postContent) {
   return(dispatch) => {
-    fetch('/api/posts', {
+    fetch('http://localhost:8080/v1/posts', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        postContent,
-      })
+      body: JSON.stringify(postContent)
     })
     .then(res => res.json() )
     .then(data => {
